@@ -48,39 +48,40 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav className={`bg-white/95 backdrop-blur-md transition-shadow duration-300 ${scrolled ? 'shadow-md border-b border-slate-100' : 'border-b border-slate-100'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-20 gap-4">
+            
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
+            <a href="#" className="flex items-center gap-3.5 group shrink-0">
               <img 
                 src="/logo.png" 
                 alt="Ashford Solutions LLC" 
                 className="h-11 w-auto object-contain group-hover:scale-105 transition-transform"
               />
               <div className="flex flex-col">
-                <span className="font-black text-lg sm:text-xl text-ashford-900 tracking-tight leading-tight">
-                  ASHFORD <span className="text-tealpro-600">SOLUTIONS LLC</span>
-                </span>
-                <span className="text-[11px] uppercase tracking-widest text-ashford-600 font-bold">
+                <div className="font-black text-lg sm:text-xl text-ashford-900 tracking-tight leading-none whitespace-nowrap">
+                  ASHFORD <span className="text-tealpro-600">SOLUTIONS</span>
+                </div>
+                <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-ashford-500 font-bold mt-1 whitespace-nowrap">
                   Houston Grounds & Landscaping
-                </span>
+                </div>
               </div>
             </a>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-7 text-sm font-bold text-slate-700">
-              <a href="#services" className="hover:text-tealpro-600 transition-colors">Services</a>
-              <a href="#why-us" className="hover:text-tealpro-600 transition-colors">Why Choose Us</a>
-              <a href="#process" className="hover:text-tealpro-600 transition-colors">Process</a>
-              <a href="#showcase" className="hover:text-tealpro-600 transition-colors">Showcase</a>
-              <a href="#service-area" className="hover:text-tealpro-600 transition-colors">Houston Service Area</a>
-              <a href="#contact" className="hover:text-tealpro-600 transition-colors">Contact</a>
+            <div className="hidden xl:flex items-center space-x-6 text-sm font-bold text-slate-700">
+              <a href="#services" className="hover:text-tealpro-600 transition-colors whitespace-nowrap">Services</a>
+              <a href="#why-us" className="hover:text-tealpro-600 transition-colors whitespace-nowrap">Why Choose Us</a>
+              <a href="#process" className="hover:text-tealpro-600 transition-colors whitespace-nowrap">Process</a>
+              <a href="#showcase" className="hover:text-tealpro-600 transition-colors whitespace-nowrap">Showcase</a>
+              <a href="#service-area" className="hover:text-tealpro-600 transition-colors whitespace-nowrap">Service Area</a>
+              <a href="#contact" className="hover:text-tealpro-600 transition-colors whitespace-nowrap">Contact</a>
             </div>
 
             {/* Phone & CTA Button */}
-            <div className="hidden sm:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-3 shrink-0">
               <a 
                 href="tel:8322631162" 
-                className="flex items-center gap-2 text-ashford-900 hover:text-tealpro-600 font-extrabold text-sm transition-colors py-2 px-3 rounded-xl hover:bg-slate-50"
+                className="flex items-center gap-2 text-ashford-900 hover:text-tealpro-600 font-extrabold text-sm transition-colors py-2 px-3 rounded-xl hover:bg-slate-50 whitespace-nowrap"
               >
                 <div className="w-8 h-8 rounded-lg bg-tealpro-50 flex items-center justify-center text-tealpro-600">
                   <Phone className="w-4 h-4" />
@@ -90,7 +91,7 @@ export default function Navbar() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-tealpro-600 to-cyanpro-600 hover:from-tealpro-700 hover:to-cyanpro-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md shadow-teal-500/20 transition-all hover:shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-tealpro-600 to-cyanpro-600 hover:from-tealpro-700 hover:to-cyanpro-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md shadow-teal-500/20 transition-all hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
               >
                 <span>Free Quote</span>
                 <ChevronRight className="w-4 h-4" />
@@ -98,7 +99,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Hamburger Button */}
-            <div className="flex lg:hidden items-center gap-2">
+            <div className="flex xl:hidden items-center gap-2">
               <a
                 href="tel:8322631162"
                 className="p-2 rounded-xl text-ashford-900 bg-ashford-50"
